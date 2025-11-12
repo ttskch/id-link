@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID Link Extension Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .test-element {
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>ID Link Extension Test Page</h1>
+
+    <div class="test-element" id="section1">
+        <h2>Section 1 (has id="section1")</h2>
+        <p>This element has an id attribute. Right-click to test the extension.</p>
+    </div>
+
+    <div class="test-element">
+        <h2>Section 2 (no id)</h2>
+        <p>This element has no id or name attribute. The context menu should be disabled.</p>
+    </div>
+
+    <a name="anchor1" class="test-element">
+        <h2>Anchor 1 (has name="anchor1")</h2>
+        <p>This is an anchor tag with a name attribute. Right-click to test.</p>
+    </a>
+
+    <div class="test-element" id="section3">
+        <h2>Section 3 (has id="section3")</h2>
+        <p>Another element with an id attribute for testing.</p>
+        <div style="padding: 10px; background-color: #e0e0e0; margin: 5px;">
+            <span>Nested element without id/name</span>
+            <strong>Bold text inside nested div</strong>
+            <em>Italic text that inherits parent's id</em>
+        </div>
+    </div>
+
+    <div class="test-element">
+        <h2>Section 4 (no id, but contains nested element with id)</h2>
+        <div style="padding: 10px; background-color: #e0e0e0; margin: 5px;">
+            <p id="nested-paragraph">This paragraph has id="nested-paragraph"</p>
+            <span>This span has no id but its sibling does</span>
+        </div>
+    </div>
+
+    <p>Open Chrome DevTools Console to see copy confirmation messages.</p>
+</body>
+</html>
